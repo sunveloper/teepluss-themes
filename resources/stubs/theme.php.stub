@@ -1,0 +1,20 @@
+
+use Illuminate\Contracts\Foundation\Application;
+use Laradic\Themes\Theme;
+
+return [
+    @if($parent)
+    'parent'   => '{{ $parent }}',
+    @else
+    'parent'   => null,
+    @endif
+    'name'     => '{{ $name }}',
+    'slug'     => '{{ $slug }}',
+    'version'  => '0.0.1',
+    'register' => function (Application $app, Theme $theme)
+    {
+    },
+    'boot'     => function (Application $app, Theme $theme)
+    {
+    }
+];

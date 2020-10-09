@@ -1,0 +1,58 @@
+{
+  "name": "laradic/themes",
+  "description": "Laravel 5 package providing multi-theme inherited cascading support for views and assets.",
+  "homepage": "https://github.com/laradic/themes",
+  "keywords": [
+    "extension",
+    "extensions",
+    "blade",
+    "laravel",
+    "theme",
+    "themes",
+    "twig",
+    "template",
+    "templates"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Robin Radic",
+      "email": "robin@radic.nl",
+      "role": "Package Author/Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/sunveloper/teepluss-support"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/sunveloper/teepluss-console"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
+    "illuminate/view": "^5.0|^6.0|^7.0|^8.0",
+    "laradic/support": "^4.0|^5.0|^6.0",
+    "laradic/console": "^4.0|^5.0|^6.0",
+    "kriswallsmith/assetic": "^1.2",
+    "vierbergenlars/php-semver": "^3.0.2",
+    "laravelcollective/html": "^5.0|^6.0"
+  },
+  "require-dev": {
+    "laradic/dev": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Laradic\\Themes\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Laradic\\Tests\\Themes\\": "tests/"
+    }
+  }
+}
