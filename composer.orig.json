@@ -36,11 +36,11 @@
   "require": {
     "illuminate/support": "^5.0|^6.0|^7.0|^8.0",
     "illuminate/view": "^5.0|^6.0|^7.0|^8.0",
-    "laradic/support": "^4.0|^5.0|^6.0",
-    "laradic/console": "^4.0|^5.0|^6.0",
-    "kriswallsmith/assetic": "^1.2",
-    "vierbergenlars/php-semver": "^3.0.2",
-    "laravelcollective/html": "^5.0|^6.0"
+    "laradic/support": "^4.0|^5.0|^6.0|^7.0|^8.0",
+    "laradic/console": "^4.0|^5.0|^6.0|^7.0|^8.0",
+    "kriswallsmith/assetic": "^1.2|^2.0|^3.0",
+    "vierbergenlars/php-semver": "^3.0.2|^4.0|^5.0",
+    "laravelcollective/html": "^5.0|^6.0|^7.0"
   },
   "require-dev": {
     "laradic/dev": "dev-master"
