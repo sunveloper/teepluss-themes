@@ -39,17 +39,11 @@
     "vierbergenlars/php-semver": "^3.0.2|^4.0|^5.0",
     "laravelcollective/html": "^5.0|^6.0|^7.0"
   },
-  "require-dev": {
-    "laradic/dev": "dev-master"
-  },
+  "require-dev": {},
   "autoload": {
     "psr-4": {
       "Laradic\\Themes\\": "src/"
     }
   },
-  "autoload-dev": {
-    "psr-4": {
-      "Laradic\\Tests\\Themes\\": "tests/"
-    }
-  }
+  "autoload-dev": {}
 }
