@@ -1,35 +1,32 @@
 <?php
-
-
-
 return array(
     /* paths */
-    'active'          => 'frontend/example',
-    'default'         => 'frontend/default',
+    'active' => 'frontend/example',
+    'default' => 'frontend/default',
     /* Class names */
-    'assetClass'      => '\\Laradic\\Themes\\Assets\\Asset',
-    'assetGroupClass' => '\\Laradic\\Themes\\Assets\\AssetGroup',
-    'themeClass'      => '\\Laradic\\Themes\\Theme',
-    'paths'           => array(
-        'themes'     => array(
+    'assetClass' => '\\Sunveloper\\TeeplussThemes\\Assets\\Asset',
+    'assetGroupClass' => '\\Sunveloper\\TeeplussThemes\\Assets\\AssetGroup',
+    'themeClass' => '\\Sunveloper\\TeeplussThemes\\Theme',
+    'paths' => array(
+        'themes' => array(
             public_path('themes'),
-            public_path()
+            public_path(),
         ),
         // These paths are relative to the theme path defined above
         'namespaces' => 'namespaces',
-        'packages'   => 'packages',
-        'views'      => 'views',    //default ex: public/themes/{area}/{theme}/views
-        'assets'     => 'assets',
+        'packages' => 'packages',
+        'views' => 'views', //default ex: public/themes/{area}/{theme}/views
+        'assets' => 'assets',
         // full path to cache folder, requires to be public
-        'cache'      => public_path('cache')
+        'cache' => public_path('cache'),
     ),
     'assets' => array(
         /* Assetic Filters that should be applied to all assets with the given extension
-           Note that adding global filters can also be done by using Asset::addGlobalFilter('css', 'FilterFQClassName....') */
+        Note that adding global filters can also be done by using Asset::addGlobalFilter('css', 'FilterFQClassName....') */
         'globalFilters' => array(
             'css' => array('Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter'),
             'js' => array('Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter'),
             #'scss' => array('Assetic\Filter\ScssphpFilter', 'Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter')
-        )
-    )
+        ),
+    ),
 );

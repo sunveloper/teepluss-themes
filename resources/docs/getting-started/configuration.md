@@ -4,14 +4,13 @@ author: Robin Radic
 icon: fa fa-legal
 -->
 
-  
 ##### Configuration
+
 ```sh
 php artisan vendor:publish laradic/themes --tag="config"
 ```
 
 ```php
-
 return array(
     /* paths */
     'active'          => 'frontend/default',
@@ -19,9 +18,9 @@ return array(
     /** @deprecated */
     'fallback'        => null,
     /* Class names */
-    'assetClass'      => '\\Laradic\\Themes\\Assets\\Asset',
-    'assetGroupClass' => '\\Laradic\\Themes\\Assets\\AssetGroup',
-    'themeClass'      => '\\Laradic\\Themes\\Theme',
+    'assetClass'      => '\\Sunveloper\\TeeplussThemes\\Assets\\Asset',
+    'assetGroupClass' => '\\Sunveloper\\TeeplussThemes\\Assets\\AssetGroup',
+    'themeClass'      => '\\Sunveloper\\TeeplussThemes\\Theme',
     'paths'           => array(
         'themes'     => array(
             public_path('themes'),
@@ -45,6 +44,4 @@ return array(
         )
     )
 );
-
 ```
-  
