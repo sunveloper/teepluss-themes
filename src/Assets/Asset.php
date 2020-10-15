@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Assets;
 use Assetic\Asset\FileAsset;
 use Assetic\Filter\FilterInterface;
 use Assetic\Filter\HashableInterface;
-use Laradic\Support\Contracts\Dependable;
+use Sunveloper\TeeplussSupport\Contracts\Dependable;
 
 /**
  * This is the Asset.

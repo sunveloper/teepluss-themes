@@ -9,7 +9,7 @@ namespace Sunveloper\TeeplussThemes;
 
 use Illuminate\Foundation\Application;
 use Illuminate\View\FileViewFinder;
-use Laradic\Support\ServiceProvider;
+use Sunveloper\TeeplussSupport\ServiceProvider;
 use Laradic\Themes\Assets\AssetFactory;
 
 /**
@@ -26,8 +26,8 @@ class ThemeServiceProvider extends ServiceProvider
 {
     protected $providers = [
         /* \Laradic\Themes\Providers\BusServiceProvider::class, */
-        \Laradic\Themes\Providers\EventServiceProvider::class,
-        \Laradic\Themes\Providers\ConsoleServiceProvider::class,
+        \Sunveloper\TeeplussThemes\Providers\EventServiceProvider::class,
+        \Sunveloper\TeeplussThemes\Providers\ConsoleServiceProvider::class,
         \Collective\Html\HtmlServiceProvider::class,
     ];
     public function boot()

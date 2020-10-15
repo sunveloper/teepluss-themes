@@ -7,7 +7,7 @@
  */
 namespace Sunveloper\TeeplussThemes\Console;
 
-use Laradic\Console\Command;
+use Sunveloper\TeeplussConsole\Command;
 
 /**
  * This is the ThemePublishersCommand class.

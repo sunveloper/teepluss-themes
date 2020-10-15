@@ -11,7 +11,7 @@
 namespace Laradic\Tests\Themes;
 
 use Illuminate\Support\NamespacedItemResolver;
-use Laradic\Support\String;
+use Sunveloper\TeeplussSupport\String;
 use Laradic\Themes\Assets\AssetFactory;
 
 use Laradic\Themes\Theme;

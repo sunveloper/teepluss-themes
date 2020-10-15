@@ -7,9 +7,9 @@
  */
 namespace Sunveloper\TeeplussThemes\Console;
 
-use Laradic\Console\Command;
-use Laradic\Console\Traits\SlugPackageTrait;
-use Laradic\Support\Path;
+use Sunveloper\TeeplussConsole\Command;
+use Sunveloper\TeeplussConsole\Traits\SlugPackageTrait;
+use Sunveloper\TeeplussSupport\Path;
 use Laradic\Themes\ThemeGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 

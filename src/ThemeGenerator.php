@@ -7,8 +7,8 @@
  */
 namespace Sunveloper\TeeplussThemes;
 
-use Laradic\Support\Path;
-use Laradic\Support\StubGenerator;
+use Sunveloper\TeeplussSupport\Path;
+use Sunveloper\TeeplussSupport\StubGenerator;
 use Symfony\Component\VarDumper\VarDumper;
 
 /**

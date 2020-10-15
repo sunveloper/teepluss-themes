@@ -7,7 +7,7 @@
  */
 namespace Sunveloper\TeeplussThemes\Providers;
 
-use Laradic\Console\AggregateConsoleProvider;
+use Sunveloper\TeeplussConsole\AggregateConsoleProvider;
 
 /**
  * This is the ConsoleServiceProvider class.

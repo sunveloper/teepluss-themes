@@ -14,8 +14,8 @@ use Closure;
 use File;
 use HTML;
 use InvalidArgumentException;
-use Laradic\Support\Sorter;
-use Laradic\Support\String;
+use Sunveloper\TeeplussSupport\Sorter;
+use Sunveloper\TeeplussSupport\String;
 
 /**
  * This is the AssetGroup class.

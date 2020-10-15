@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Assets;
 use File;
 use HTML;
 use Illuminate\Support\NamespacedItemResolver;
-use Laradic\Support\String;
+use Sunveloper\TeeplussSupport\String;
 use Laradic\Themes\Contracts\AssetFactory as AssetFactoryContract;
 use Laradic\Themes\Contracts\ThemeFactory;
 use URL;

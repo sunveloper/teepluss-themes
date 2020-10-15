@@ -7,7 +7,7 @@
  */
 namespace Sunveloper\TeeplussThemes\Console;
 
-use Laradic\Console\Command;
+use Sunveloper\TeeplussConsole\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
