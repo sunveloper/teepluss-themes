@@ -26,7 +26,7 @@
     "php": ">=5.4.0",
     "illuminate/support": "^5.0 || ^6.0 || ^7.0 || ^8.0",
     "illuminate/view": "^5.0 || ^6.0 || ^7.0 || ^8.0",
-    "sunveloper/teepluss-support": "^4.0.3",
+    "sunveloper/teepluss-support": "^4.0.4",
     "sunveloper/teepluss-console": "^4.0.2",
     "sunveloper/kriswallsmith-assetic": "^1.4.0",
     "vierbergenlars/php-semver": "^3.0.2 || ^4.0 || ^5.0",
