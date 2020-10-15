@@ -11,14 +11,14 @@ icon: fa fa-legal
 ###### Laravel
 Add the ThemesServiceProvider to your config.
 ```php
-'Laradic\Themes\ThemesServiceProvider'
+'Sunveloper\TeeplussThemes\ThemesServiceProvider'
 ```
 
 Optionally, you can add any of the Facades below:
 ```php
 array(
-    'Themes' => 'Laradic\Themes\Facades\Themes',
-    'Asset' => 'Laradic\Themes\Facades\Asset',
-    'Navigation' => 'Laradic\Themes\Facades\Navigation'
+    'Themes' => 'Sunveloper\TeeplussThemes\Facades\Themes',
+    'Asset' => 'Sunveloper\TeeplussThemes\Facades\Asset',
+    'Navigation' => 'Sunveloper\TeeplussThemes\Facades\Navigation'
 );
 ```

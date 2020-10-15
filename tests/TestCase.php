@@ -46,7 +46,7 @@ abstract class TestCase extends AbstractTestCase
 
     protected function assertTheme($theme)
     {
-        $this->assertInstanceOf(\Laradic\Themes\Theme::class, $theme);
+        $this->assertInstanceOf(\Sunveloper\TeeplussThemes\Theme::class, $theme);
         $this->assertInstanceOf(\vierbergenlars\SemVer\Internal\SemVer::class, $theme->getVersion());
     }
 

@@ -15,7 +15,7 @@ use Sunveloper\TeeplussSupport\Contracts\Dependable;
 /**
  * This is the Asset.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License

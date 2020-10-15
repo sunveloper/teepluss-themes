@@ -14,7 +14,7 @@ use Symfony\Component\VarDumper\VarDumper;
 /**
  * This is the ThemeGenerator.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License

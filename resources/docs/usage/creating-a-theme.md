@@ -36,7 +36,7 @@ A perfect place to manage your assets
   
 ```php
 use Illuminate\Contracts\Foundation\Application;
-use Laradic\Themes\Theme;
+use Sunveloper\TeeplussThemes\Theme;
 
 return [
     'parent'   => null, // backend/parent

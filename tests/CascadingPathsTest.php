@@ -26,7 +26,7 @@ class CascadingPathsTest extends TestCase
         parent::setUp();
 
         $this->app->instance('path.public', realpath(__DIR__ . '/fixture/public'));
-        $this->app->register(\Laradic\Themes\ThemeServiceProvider::class);
+        $this->app->register(\Sunveloper\TeeplussThemes\ThemeServiceProvider::class);
     }
 
     protected function assertViewContent($view,$expected){
@@ -36,7 +36,7 @@ class CascadingPathsTest extends TestCase
     public function testCascade()
     {
         /**
-         * @var \Laradic\Themes\ThemeFactory $themes
+         * @var \Sunveloper\TeeplussThemes\ThemeFactory $themes
          */
         $themes = $this->app[ 'themes' ];
 

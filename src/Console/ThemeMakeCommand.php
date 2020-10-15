@@ -10,13 +10,13 @@ namespace Sunveloper\TeeplussThemes\Console;
 use Sunveloper\TeeplussConsole\Command;
 use Sunveloper\TeeplussConsole\Traits\SlugPackageTrait;
 use Sunveloper\TeeplussSupport\Path;
-use Laradic\Themes\ThemeGenerator;
+use Sunveloper\TeeplussThemes\ThemeGenerator;
 use Symfony\Component\Console\Input\InputArgument;
 
 /**
  * This is the ThemePublishCommand class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License

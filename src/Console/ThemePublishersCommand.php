@@ -12,7 +12,7 @@ use Sunveloper\TeeplussConsole\Command;
 /**
  * This is the ThemePublishersCommand class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License

@@ -7,7 +7,7 @@
  */
 namespace Laradic\Tests\Themes;
 
-use Laradic\Themes\ThemeViewFinder;
+use Sunveloper\TeeplussThemes\ThemeViewFinder;
 use Mockery as m;
 
 /**
@@ -34,7 +34,7 @@ class ThemeViewFinderTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->tfMock = m::mock('\Laradic\Themes\ThemeFactory');
+        $this->tfMock = m::mock('\Sunveloper\TeeplussThemes\ThemeFactory');
 
         $this->fsMock = m::mock('Illuminate\Filesystem\Filesystem');
 

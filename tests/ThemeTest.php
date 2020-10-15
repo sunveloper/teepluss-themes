@@ -7,7 +7,7 @@
  */
 namespace Laradic\Tests\Themes;
 
-use Laradic\Themes\Theme;
+use Sunveloper\TeeplussThemes\Theme;
 use Mockery as m;
 
 /**
@@ -35,7 +35,7 @@ class ThemeTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $this->factory     = m::mock('Laradic\Themes\ThemeFactory');
+        $this->factory     = m::mock('Sunveloper\TeeplussThemes\ThemeFactory');
         $this->fs          = m::mock('Illuminate\Filesystem\Filesystem');
         $this->events      = m::mock('Illuminate\Contracts\Events\Dispatcher');
         $this->path        = public_path('themes/frontend/example');
@@ -63,7 +63,7 @@ class ThemeTest extends TestCase
         $this->_getTheme([
             'register' => function($app, $_theme) use ($that) {
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
-                $that->assertInstanceOf(\Laradic\Themes\Theme::class, $_theme);
+                $that->assertInstanceOf(\Sunveloper\TeeplussThemes\Theme::class, $_theme);
             }
         ]);
     }
@@ -96,7 +96,7 @@ class ThemeTest extends TestCase
         $theme = $this->_getTheme([
             'boot' => function($app, $_theme) use ($that) {
                 $that->assertInstanceOf('Illuminate\Contracts\Foundation\Application', $app);
-                $that->assertInstanceOf(\Laradic\Themes\Theme::class, $_theme);
+                $that->assertInstanceOf(\Sunveloper\TeeplussThemes\Theme::class, $_theme);
             }
         ]);
         $this->events->shouldReceive('fire')->once()->andReturn();
@@ -124,7 +124,7 @@ class ThemeTest extends TestCase
 
     public function testConstructWithParentTheme()
     {
-        $parent = m::mock('Laradic\Themes\Theme');
+        $parent = m::mock('Sunveloper\TeeplussThemes\Theme');
 
         $this->factory->shouldReceive('resolveTheme')->with(m::mustBe('frontend/parent'))->andReturn($parent);
         $theme = $this->_getTheme([

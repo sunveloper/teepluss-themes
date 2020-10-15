@@ -10,6 +10,6 @@ return [
     'name' => 'Frontend default theme',
     'version' => '1.0.0',
     'parent' => null,
-    #'register' => function(\Illuminate\Contracts\Foundation\Application $app, \Laradic\Themes\ThemeFactory $themes){},
-    #'boot' => function(\Illuminate\Contracts\Foundation\Application $app, \Laradic\Themes\ThemeFactory $themes){}
+    #'register' => function(\Illuminate\Contracts\Foundation\Application $app, \Sunveloper\TeeplussThemes\ThemeFactory $themes){},
+    #'boot' => function(\Illuminate\Contracts\Foundation\Application $app, \Sunveloper\TeeplussThemes\ThemeFactory $themes){}
 ];

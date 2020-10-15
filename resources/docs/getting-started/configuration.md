@@ -39,9 +39,9 @@ return array(
         /* Assetic Filters that should be applied to all assets with the given extension
            Note that adding global filters can also be done by using Asset::addGlobalFilter('css', 'FilterFQClassName....') */
         'globalFilters' => array(
-            'css' => array('Laradic\Themes\Assets\Filters\UriRewriteFilter'),
-            'js' => array('Laradic\Themes\Assets\Filters\UriRewriteFilter'),
-            'scss' => array('Assetic\Filter\ScssphpFilter', 'Laradic\Themes\Assets\Filters\UriRewriteFilter')
+            'css' => array('Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter'),
+            'js' => array('Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter'),
+            'scss' => array('Assetic\Filter\ScssphpFilter', 'Sunveloper\TeeplussThemes\Assets\Filters\UriRewriteFilter')
         )
     )
 );

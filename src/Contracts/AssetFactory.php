@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Contracts;
 /**
  * Interface AssetFactory
  *
- * @package Laradic\Themes\Contracts
+ * @package Sunveloper\TeeplussThemes\Contracts
  */
 interface AssetFactory {
 }

@@ -15,14 +15,14 @@ use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\NamespacedItemResolver;
 use IteratorAggregate;
-use Laradic\Themes\Contracts\NavigationFactory;
-use Laradic\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Sunveloper\TeeplussThemes\Contracts\NavigationFactory;
+use Sunveloper\TeeplussThemes\Contracts\ThemeFactory as ThemeFactoryContract;
 use RuntimeException;
 
 /**
  * This is the ThemeFactory class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -42,14 +42,14 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * The active theme instance
      *
-     * @var \Laradic\Themes\Theme
+     * @var \Sunveloper\TeeplussThemes\Theme
      */
     protected $active;
 
     /**
      * The default theme instance
      *
-     * @var \Laradic\Themes\Theme
+     * @var \Sunveloper\TeeplussThemes\Theme
      */
     protected $default;
 
@@ -63,7 +63,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * The theme package's view finder to locate theme views
      *
-     * @var \Laradic\Themes\ThemeViewFinder
+     * @var \Sunveloper\TeeplussThemes\ThemeViewFinder
      */
     protected $finder;
 
@@ -92,7 +92,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * The navigation instance
      *
-     * @var \Laradic\Themes\Contracts\NavigationFactory
+     * @var \Sunveloper\TeeplussThemes\Contracts\NavigationFactory
      */
     protected $navigation;
 
@@ -106,7 +106,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * The asset factory instance
      *
-     * @var \Laradic\Themes\Assets\AssetFactory
+     * @var \Sunveloper\TeeplussThemes\Assets\AssetFactory
      */
     protected $assets;
 
@@ -128,7 +128,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Set the active theme that should be used
      *
-     * @param string|\Laradic\Themes\Theme $theme The slug or Theme instance
+     * @param string|\Sunveloper\TeeplussThemes\Theme $theme The slug or Theme instance
      * @return $this
      */
     public function setActive($theme)
@@ -153,7 +153,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get the activated theme
      *
-     * @return \Laradic\Themes\Theme
+     * @return \Sunveloper\TeeplussThemes\Theme
      */
     public function getActive()
     {
@@ -168,7 +168,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get the default theme
      *
-     * @return \Laradic\Themes\Theme
+     * @return \Sunveloper\TeeplussThemes\Theme
      */
     public function getDefault()
     {
@@ -183,7 +183,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Set the default theme
      *
-     * @param string|\Laradic\Themes\Theme $theme The slug or Theme instance
+     * @param string|\Sunveloper\TeeplussThemes\Theme $theme The slug or Theme instance
      */
     public function setDefault($theme)
     {
@@ -241,7 +241,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get a theme with the provided slug, equal to resolveTheme
      *
-     * @return \Laradic\Themes\Theme
+     * @return \Sunveloper\TeeplussThemes\Theme
      */
     public function get($slug)
     {
@@ -485,7 +485,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get the theme view finder instance
      *
-     * @return \Laradic\Themes\ThemeViewFinder
+     * @return \Sunveloper\TeeplussThemes\ThemeViewFinder
      */
     public function getFinder()
     {
@@ -495,7 +495,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * setFinder
      *
-     * @param \Laradic\Themes\ThemeViewFinder $finder
+     * @param \Sunveloper\TeeplussThemes\ThemeViewFinder $finder
      * @return $this
      */
     public function setFinder(ThemeViewFinder $finder)
@@ -637,7 +637,7 @@ class ThemeFactory implements ArrayAccess, Countable, IteratorAggregate, ThemeFa
     /**
      * Get the asset factory instance
      *
-     * @return \Laradic\Themes\Assets\AssetFactory
+     * @return \Sunveloper\TeeplussThemes\Assets\AssetFactory
      */
     public function getAssets()
     {

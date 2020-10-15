@@ -12,7 +12,7 @@ use Illuminate\Filesystem\Filesystem;
 /**
  * This is the Publisher class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -27,7 +27,7 @@ class Publisher
 
     protected $package;
 
-    /** @var \Laradic\Themes\Theme */
+    /** @var \Sunveloper\TeeplussThemes\Theme */
     protected $theme;
 
     protected $sourcePath;

@@ -74,14 +74,14 @@ Version 0.3
 ###### Laravel
 Add the ThemesServiceProvider to your config.
 ```php
-Laradic\Themes\ThemeServiceProvider::class
+Sunveloper\TeeplussThemes\ThemeServiceProvider::class
 ```
 
 Optionally, you can add any of the Facades below:
 ```php
 array(
-    'Themes' => Laradic\Themes\Facades\Themes::class,
-    'Asset' => Laradic\Themes\Facades\Asset::class,
+    'Themes' => Sunveloper\TeeplussThemes\Facades\Themes::class,
+    'Asset' => Sunveloper\TeeplussThemes\Facades\Asset::class,
 );
 ```
 ##### Configuration
@@ -344,7 +344,7 @@ Beside the obvious fields, the boot field is rather important.
 Use the **boot** field closure to register namespaces for your theme, define assets and asset groups, and other global stuff.
 ```php
 use Illuminate\Contracts\Foundation\Application;
-use Laradic\Themes\Theme;
+use Sunveloper\TeeplussThemes\Theme;
 
 return [
     'parent'   => null,

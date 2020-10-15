@@ -12,7 +12,7 @@ use Sunveloper\TeeplussConsole\AggregateConsoleProvider;
 /**
  * This is the ConsoleServiceProvider class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -21,7 +21,7 @@ use Sunveloper\TeeplussConsole\AggregateConsoleProvider;
  */
 class ConsoleServiceProvider extends AggregateConsoleProvider {
 
-    protected $namespace = 'Laradic\Themes\Console';
+    protected $namespace = 'Sunveloper\TeeplussThemes\Console';
 
     protected $commands = [
         'ThemePublish' => 'commands.themes.publish',

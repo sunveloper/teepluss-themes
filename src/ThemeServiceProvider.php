@@ -10,12 +10,12 @@ namespace Sunveloper\TeeplussThemes;
 use Illuminate\Foundation\Application;
 use Illuminate\View\FileViewFinder;
 use Sunveloper\TeeplussSupport\ServiceProvider;
-use Laradic\Themes\Assets\AssetFactory;
+use Sunveloper\TeeplussThemes\Assets\AssetFactory;
 
 /**
  * This is the ThemeServiceProvider class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -25,7 +25,7 @@ use Laradic\Themes\Assets\AssetFactory;
 class ThemeServiceProvider extends ServiceProvider
 {
     protected $providers = [
-        /* \Laradic\Themes\Providers\BusServiceProvider::class, */
+        /* \Sunveloper\TeeplussThemes\Providers\BusServiceProvider::class, */
         \Sunveloper\TeeplussThemes\Providers\EventServiceProvider::class,
         \Sunveloper\TeeplussThemes\Providers\ConsoleServiceProvider::class,
         \Collective\Html\HtmlServiceProvider::class,
@@ -61,7 +61,7 @@ class ThemeServiceProvider extends ServiceProvider
     protected function registerAssets()
     {
         $this->app->singleton('assets', function (Application $app) {
-            $assetFactory = new AssetFactory($app['themes']); //Laradic\Themes\Assets\AssetFactory
+            $assetFactory = new AssetFactory($app['themes']); //Sunveloper\TeeplussThemes\Assets\AssetFactory
             $assetFactory->setAssetClass(config('laradic.themes.assetClass'));
             $assetFactory->setAssetGroupClass(config('laradic.themes.assetGroupClass'));
             $assetFactory->setCachePath(config('laradic.themes.paths.cache'));
@@ -72,7 +72,7 @@ class ThemeServiceProvider extends ServiceProvider
             }
             return $assetFactory;
         });
-        $this->app->alias('assets', 'Laradic\Themes\Contracts\AssetFactory');
+        $this->app->alias('assets', 'Sunveloper\TeeplussThemes\Contracts\AssetFactory');
     }
     protected function registerThemes()
     {
@@ -84,7 +84,7 @@ class ThemeServiceProvider extends ServiceProvider
             $themeFactory->setDefault(config('laradic.themes.default'));
             return $themeFactory;
         });
-        $this->app->alias('themes', 'Laradic\Themes\Contracts\ThemeFactory');
+        $this->app->alias('themes', 'Sunveloper\TeeplussThemes\Contracts\ThemeFactory');
     }
     protected function registerViewFinder()
     {

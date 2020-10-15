@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Traits;
 /**
  * This is the ThemeProviderTrait trait.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License

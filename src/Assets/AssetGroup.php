@@ -20,7 +20,7 @@ use Sunveloper\TeeplussSupport\String;
 /**
  * This is the AssetGroup class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -33,7 +33,7 @@ class AssetGroup
     protected $name;
 
     /**
-     * @var \Laradic\Themes\Assets\AssetFactory
+     * @var \Sunveloper\TeeplussThemes\Assets\AssetFactory
      */
     protected $factory;
 

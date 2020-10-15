@@ -25,6 +25,6 @@ class ThemeSupportServiceProviderTest extends TestCase
 
     protected function getServiceProviderClass($app)
     {
-        return 'Laradic\Themes\ThemeServiceProvider';
+        return 'Sunveloper\TeeplussThemes\ThemeServiceProvider';
     }
 }

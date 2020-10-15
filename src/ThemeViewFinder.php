@@ -10,8 +10,8 @@ namespace Sunveloper\TeeplussThemes;
 use Illuminate\Support\NamespacedItemResolver;
 use Illuminate\View\FileViewFinder;
 use InvalidArgumentException;
-use Laradic\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
-use Laradic\Themes\Contracts\ThemeViewFinder as ThemeViewFinderContract;
+use Sunveloper\TeeplussThemes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Sunveloper\TeeplussThemes\Contracts\ThemeViewFinder as ThemeViewFinderContract;
 
 /**
  * This is the ThemeViewFinder class.
@@ -27,7 +27,7 @@ class ThemeViewFinder extends FileViewFinder implements ThemeViewFinderContract
 {
 
     /**
-     * @var $themes \Laradic\Themes\ThemeFactory
+     * @var $themes \Sunveloper\TeeplussThemes\ThemeFactory
      */
     protected $themes;
 

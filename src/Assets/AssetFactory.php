@@ -11,15 +11,15 @@ use File;
 use HTML;
 use Illuminate\Support\NamespacedItemResolver;
 use Sunveloper\TeeplussSupport\String;
-use Laradic\Themes\Contracts\AssetFactory as AssetFactoryContract;
-use Laradic\Themes\Contracts\ThemeFactory;
+use Sunveloper\TeeplussThemes\Contracts\AssetFactory as AssetFactoryContract;
+use Sunveloper\TeeplussThemes\Contracts\ThemeFactory;
 use URL;
 use View;
 
 /**
  * This is the AssetFactory.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -30,7 +30,7 @@ class AssetFactory implements AssetFactoryContract
 {
 
     /**
-     * @var \Laradic\Themes\ThemeFactory
+     * @var \Sunveloper\TeeplussThemes\ThemeFactory
      */
     protected $themes;
 
@@ -55,7 +55,7 @@ class AssetFactory implements AssetFactoryContract
 
     /** Instantiates the class
      *
-     * @param \Laradic\Themes\Contracts\ThemeFactory $themes
+     * @param \Sunveloper\TeeplussThemes\Contracts\ThemeFactory $themes
      */
     public function __construct(ThemeFactory $themes)
     {
@@ -69,7 +69,7 @@ class AssetFactory implements AssetFactoryContract
      * @param string $handle       The ID/key for this asset
      * @param string $path         File location path
      * @param array  $dependencies Optional dependencies
-     * @return \Laradic\Themes\Assets\Asset
+     * @return \Sunveloper\TeeplussThemes\Assets\Asset
      */
     public function make($handle, $path, array $dependencies = [ ])
     {
@@ -281,7 +281,7 @@ class AssetFactory implements AssetFactoryContract
     /**
      * getThemes
      *
-     * @return \Laradic\Themes\Contracts\ThemeFactory|\Laradic\Themes\ThemeFactory
+     * @return \Sunveloper\TeeplussThemes\Contracts\ThemeFactory|\Sunveloper\TeeplussThemes\ThemeFactory
      */
     public function getThemes()
     {

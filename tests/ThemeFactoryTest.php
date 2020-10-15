@@ -12,10 +12,10 @@ namespace Laradic\Tests\Themes;
 
 use Illuminate\Support\NamespacedItemResolver;
 use Sunveloper\TeeplussSupport\String;
-use Laradic\Themes\Assets\AssetFactory;
+use Sunveloper\TeeplussThemes\Assets\AssetFactory;
 
-use Laradic\Themes\Theme;
-use Laradic\Themes\ThemeFactory;
+use Sunveloper\TeeplussThemes\Theme;
+use Sunveloper\TeeplussThemes\ThemeFactory;
 use Mockery as m;
 use Symfony\Component\VarDumper\VarDumper;
 
@@ -34,7 +34,7 @@ class ThemeFactoryTest extends TestCase
         $this->fs = m::mock('Illuminate\Filesystem\Filesystem');
         $this->factory = new ThemeFactory($this->fs, $this->app->make('events'));
         $this->factory->setPaths($this->paths);
-        $this->factory->setThemeClass(\Laradic\Themes\Theme::class);
+        $this->factory->setThemeClass(\Sunveloper\TeeplussThemes\Theme::class);
     }
 
     public function tearDown()
@@ -171,9 +171,9 @@ class ThemeFactoryTest extends TestCase
 
     public function testBoot()
     {
-        $active = m::mock(\Laradic\Themes\Theme::class);
-        $parent = m::mock(\Laradic\Themes\Theme::class);
-        $default = m::mock(\Laradic\Themes\Theme::class);
+        $active = m::mock(\Sunveloper\TeeplussThemes\Theme::class);
+        $parent = m::mock(\Sunveloper\TeeplussThemes\Theme::class);
+        $default = m::mock(\Sunveloper\TeeplussThemes\Theme::class);
         $active->shouldReceive('getSlug')->twice()->andReturn('frontend/example');
         $default->shouldReceive('getSlug')->twice()->andReturn('frontend/default');
         $this->factory
@@ -188,13 +188,13 @@ class ThemeFactoryTest extends TestCase
     }
 
     public function testGettersSetters(){
-        $this->app->register(\Laradic\Themes\ThemeServiceProvider::class);
-        /** @var \Laradic\Themes\ThemeFactory $themes */
+        $this->app->register(\Sunveloper\TeeplussThemes\ThemeServiceProvider::class);
+        /** @var \Sunveloper\TeeplussThemes\ThemeFactory $themes */
         $themes = $this->app['themes'];
-        $this->assertInstanceOf(\Laradic\Themes\Contracts\ThemeViewFinder::class, $themes->getFinder());
+        $this->assertInstanceOf(\Sunveloper\TeeplussThemes\Contracts\ThemeViewFinder::class, $themes->getFinder());
         $this->assertTrue(is_array($themes->getPublishers()));
-        $themes->setThemeClass(\Laradic\Themes\Theme::class);
-        $this->assertEquals(\Laradic\Themes\Theme::class, $themes->getThemeClass());
+        $themes->setThemeClass(\Sunveloper\TeeplussThemes\Theme::class);
+        $this->assertEquals(\Sunveloper\TeeplussThemes\Theme::class, $themes->getThemeClass());
         $this->assertInstanceOf(\ArrayIterator::class, $themes->getIterator());
 
 
@@ -209,7 +209,7 @@ class ThemeFactoryTest extends TestCase
         //call_user_func_array([$factory, 'getThemePath'], );
         /** @var \Illuminate\Foundation\Application $app */
         $app = $this->app;
-        $app->register('Laradic\Themes\ThemeServiceProvider');
+        $app->register('Sunveloper\TeeplussThemes\ThemeServiceProvider');
         $f = $app->make('themes');
         #$f->boot();
         VarDumper::dump($f->getThemeClass());

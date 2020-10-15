@@ -9,9 +9,9 @@ namespace Sunveloper\TeeplussThemes;
 
 use Closure;
 use File;
-use Laradic\Themes\Contracts\ThemeFactory as ThemeFactoryContract;
+use Sunveloper\TeeplussThemes\Contracts\ThemeFactory as ThemeFactoryContract;
 use Illuminate\Contracts\Events\Dispatcher;
-use Laradic\Themes\Exceptions\ThemesConfigurationException;
+use Sunveloper\TeeplussThemes\Exceptions\ThemesConfigurationException;
 use Stringy\Stringy;
 use Symfony\Component\Filesystem\Exception\FileNotFoundException;
 use vierbergenlars\SemVer\Internal\SemVer;
@@ -19,7 +19,7 @@ use vierbergenlars\SemVer\Internal\SemVer;
 /**
  * This is the Theme class.
  *
- * @package        Laradic\Themes
+ * @package        Sunveloper\TeeplussThemes
  * @version        1.0.0
  * @author         Robin Radic
  * @license        MIT License
@@ -29,7 +29,7 @@ use vierbergenlars\SemVer\Internal\SemVer;
 class Theme
 {
     /**
-     * @var \Laradic\Themes\ThemeFactory
+     * @var \Sunveloper\TeeplussThemes\ThemeFactory
      */
     protected $themes;
 

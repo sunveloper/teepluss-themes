@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Contracts;
 /**
  * Interface ThemeViewFinder
  *
- * @package Laradic\Themes\Contracts
+ * @package Sunveloper\TeeplussThemes\Contracts
  */
 interface ThemeViewFinder
 {

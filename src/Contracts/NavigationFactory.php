@@ -10,7 +10,7 @@ namespace Sunveloper\TeeplussThemes\Contracts;
 /**
  * Interface NavigationFactory
  *
- * @package Laradic\Themes\Contracts
+ * @package Sunveloper\TeeplussThemes\Contracts
  */
 interface NavigationFactory
 {
