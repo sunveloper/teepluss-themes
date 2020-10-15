@@ -22,13 +22,6 @@
     }
   ],
   "minimum-stability": "dev",
-  "repositories": {
-    "private-packagist": {
-      "type": "composer",
-      "url": "https://repo.packagist.com/sunveloper/"
-    },
-    "packagist.org": false
-  },
   "require": {
     "php": ">=5.4.0",
     "illuminate/support": "^5.0 || ^6.0 || ^7.0 || ^8.0",
@@ -42,7 +35,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "Laradic\\Themes\\": "src/"
+      "Sunveloper\\TeeplussThemes\\": "src/"
     }
   },
   "autoload-dev": {}

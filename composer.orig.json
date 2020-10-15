@@ -21,16 +21,6 @@
       "role": "Package Author/Developer"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/sunveloper/teepluss-support"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/sunveloper/teepluss-console"
-    }
-  ],
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
@@ -45,7 +35,7 @@
   "require-dev": {},
   "autoload": {
     "psr-4": {
-      "Laradic\\Themes\\": "src/"
+      "Sunveloper\\TeeplussThemes\\": "src/"
     }
   },
   "autoload-dev": {}
