@@ -1,4 +1,4 @@
-<?php namespace Laradic\Themes\Providers;
+<?php namespace Sunveloper\TeeplussThemes\Providers;
 
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 

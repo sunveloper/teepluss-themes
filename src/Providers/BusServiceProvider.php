@@ -1,4 +1,4 @@
-<?php namespace Laradic\Themes\Providers;
+<?php namespace Sunveloper\TeeplussThemes\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;

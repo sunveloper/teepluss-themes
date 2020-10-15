@@ -1,4 +1,4 @@
-<?php namespace Laradic\Themes\Facades;
+<?php namespace Sunveloper\TeeplussThemes\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

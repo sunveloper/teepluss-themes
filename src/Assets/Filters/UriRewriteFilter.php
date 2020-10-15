@@ -5,7 +5,7 @@
  * MIT License and copyright information bundled with this package
  * in the LICENSE file or visit http://radic.mit-license.com
  */
-namespace Laradic\Themes\Assets\Filters;
+namespace Sunveloper\TeeplussThemes\Assets\Filters;
 
 
 use Assetic\Asset\AssetInterface;
