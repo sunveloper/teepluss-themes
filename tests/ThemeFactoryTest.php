@@ -11,14 +11,10 @@
 namespace Laradic\Tests\Themes;
 
 use Illuminate\Support\NamespacedItemResolver;
-use Sunveloper\TeeplussSupport\String;
-use Sunveloper\TeeplussThemes\Assets\AssetFactory;
-
+use Mockery as m;
 use Sunveloper\TeeplussThemes\Theme;
 use Sunveloper\TeeplussThemes\ThemeFactory;
-use Mockery as m;
 use Symfony\Component\VarDumper\VarDumper;
-
 
 /**
  * Class StrTest
@@ -36,30 +32,27 @@ class ThemeFactoryTest extends TestCase
         $this->factory->setPaths($this->paths);
         $this->factory->setThemeClass(\Sunveloper\TeeplussThemes\Theme::class);
     }
-
     public function tearDown()
     {
         m::close();
     }
-
-    protected function _resolveTheme($slug = 'frontend/example', array $config = []){
+    protected function _resolveTheme($slug = 'frontend/example', array $config = [])
+    {
         $config['slug'] = $slug;
         $this->fs->shouldReceive('getRequire')->andReturn($this->_getThemeConfig($config));
         return $this->factory->resolveTheme($slug);
     }
-
-    protected function _getThemePath($slug = 'frontend/example'){
+    protected function _getThemePath($slug = 'frontend/example')
+    {
         list($area, $key) = with(new NamespacedItemResolver)->parseKey($slug);
         return $this->factory->getThemePath(public_path('themes'), $key, $area);
     }
-
     public function testResolveTheme()
     {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
         $this->fs->shouldReceive('exists')->once()->andReturn(true);
         $this->assertTheme($this->_resolveTheme());
     }
-
     public function testActiveTheme()
     {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
@@ -68,7 +61,6 @@ class ThemeFactoryTest extends TestCase
         $this->factory->setActive('frontend/example');
         $this->assertTheme($this->factory->getActive());
     }
-
     /**
      * testThemePath
      * @expectedException \RuntimeException
@@ -78,7 +70,6 @@ class ThemeFactoryTest extends TestCase
     {
         $this->factory->getActive();
     }
-
     public function testDefaultTheme()
     {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
@@ -87,7 +78,6 @@ class ThemeFactoryTest extends TestCase
         $this->factory->setDefault('frontend/example');
         $this->assertTheme($this->factory->getDefault());
     }
-
     public function testHasGetAllCountMethods()
     {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
@@ -100,7 +90,6 @@ class ThemeFactoryTest extends TestCase
         $this->assertTheme($this->factory->get('frontend/example'));
         $this->assertEquals('namespaces', $this->factory->getPath('namespaces'));
     }
-
     /**
      * testThemePath
      * @expectedException \RuntimeException
@@ -110,7 +99,6 @@ class ThemeFactoryTest extends TestCase
     {
         $this->factory->getDefault();
     }
-
     /**
      * testFactoryCannotResolveTheme
      * @expectedException \Symfony\Component\Filesystem\Exception\FileNotFoundException
@@ -121,20 +109,18 @@ class ThemeFactoryTest extends TestCase
         $this->fs->shouldReceive('exists')->once()->andReturn(false);
         $this->_resolveTheme();
     }
-
     public function testResolveThemeReturnsNone()
     {
         $this->fs->shouldReceive('isDirectory')->twice()->andReturn(false);
         $this->assertNull($this->_resolveTheme());
     }
-
-    public function testArrayAccess(){
+    public function testArrayAccess()
+    {
         $this->fs->shouldReceive('isDirectory')->once()->andReturn(true);
         $this->fs->shouldReceive('exists')->once()->andReturn(true);
         $this->_resolveTheme();
         $this->assertTheme($this->factory['frontend/example']);
     }
-
     /**
      * testThemePath
      * RuntimeException
@@ -145,7 +131,6 @@ class ThemeFactoryTest extends TestCase
         $this->assertEquals(public_path('themes/proper/slug'), $this->_getThemePath('proper/slug'));
         $this->assertEquals(public_path('themes/slug'), $this->_getThemePath('slug'));
     }
-
     /**
      * testThemePath
      * @expectedException \RuntimeException
@@ -155,7 +140,6 @@ class ThemeFactoryTest extends TestCase
     {
         $this->_getThemePath('this/should/fail');
     }
-
     // @todo: to do..
     public function testAddNamespace()
     {
@@ -168,7 +152,6 @@ class ThemeFactoryTest extends TestCase
         $paths = $finder->getPaths();
         $a = 'c';
     }
-
     public function testBoot()
     {
         $active = m::mock(\Sunveloper\TeeplussThemes\Theme::class);
@@ -186,8 +169,8 @@ class ThemeFactoryTest extends TestCase
         $default->shouldReceive('boot')->once()->andReturn();
         $this->factory->boot(true, true);
     }
-
-    public function testGettersSetters(){
+    public function testGettersSetters()
+    {
         $this->app->register(\Sunveloper\TeeplussThemes\ThemeServiceProvider::class);
         /** @var \Sunveloper\TeeplussThemes\ThemeFactory $themes */
         $themes = $this->app['themes'];
@@ -196,12 +179,9 @@ class ThemeFactoryTest extends TestCase
         $themes->setThemeClass(\Sunveloper\TeeplussThemes\Theme::class);
         $this->assertEquals(\Sunveloper\TeeplussThemes\Theme::class, $themes->getThemeClass());
         $this->assertInstanceOf(\ArrayIterator::class, $themes->getIterator());
-
-
     }
     public function testFactory()
     {
-
         //$fsm = m::mock('Illuminate\Filesystem\Filesystem');
         #$factory = $this->factory($fs);
         #list($area, $key) = with(new NamespacedItemResolver)->parseKey($slug);
@@ -216,5 +196,4 @@ class ThemeFactoryTest extends TestCase
         $p = $f->count();
         $this->assertTrue(true);
     }
-
 }
